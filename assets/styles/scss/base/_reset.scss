@@ -1,0 +1,20 @@
+/* 
+  remove default values of browsers
+*/
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: $rem_default;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

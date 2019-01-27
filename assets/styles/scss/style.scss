@@ -1,0 +1,59 @@
+/* 
+  => Author : Seyed Amir Mahdavi
+  => Email : seyedamirmahdavi1996@gmail.com
+
+
+  => Guide : [
+    npm install ( to install all devDependencies )
+
+    to deploy or change 
+    npm run watch:scss ( to compile scss files to css on scss files changed )
+
+
+    to compile step by step manually
+    -- npm run compile:scss ( to compile scss files to css just once )
+    -- npm run concat:css ( to concat all files together ==== if you want add your own style file so you have to change path in package.json fot concat option ====)
+    -- npm run prefix:css ( to support for all old and modern browsers )
+    -- npm run compress:css ( to minify final css file )
+
+
+    to run all command above 
+    -- npm run build:css 
+  ]
+*/
+
+/* Abstract 
+  => nothing generate from this files
+  => all variables , functions , mixins are here
+*/
+
+@import "./abstracts/variables";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+
+/* Base
+ => all general styles is here 
+*/
+
+@import "./base/reset";
+@import "./base/grid";
+@import "./base/typography";
+
+/* Layouts
+  => styles that used in all pages
+*/
+
+@import "./layouts/header";
+@import "./layouts/footer";
+
+/* Components
+  => more specific styles
+*/
+
+
+
+/* pages
+  => styles for specific pages
+*/
+
+@import "./pages/home";

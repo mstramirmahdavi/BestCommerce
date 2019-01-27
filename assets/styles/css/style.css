@@ -1,0 +1,138 @@
+/* 
+  => Author : Seyed Amir Mahdavi
+  => Email : seyedamirmahdavi1996@gmail.com
+
+
+  => Guide : [
+    npm install ( to install all devDependencies )
+
+    to deploy or change 
+    npm run watch:scss ( to compile scss files to css on scss files changed )
+
+
+    to compile step by step manually
+    -- npm run compile:scss ( to compile scss files to css just once )
+    -- npm run concat:css ( to concat all files together ==== if you want add your own style file so you have to change path in package.json fot concat option ====)
+    -- npm run prefix:css ( to support for all old and modern browsers )
+    -- npm run compress:css ( to minify final css file )
+
+
+    to run all command above 
+    -- npm run build:css 
+  ]
+*/
+/* Abstract 
+  => nothing generate from this files
+  => all variables , functions , mixins are here
+*/
+/* colors */
+/* default values */
+/* Base
+ => all general styles is here 
+*/
+/* 
+  remove default values of browsers
+*/
+html,
+body,
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+.row {
+  max-width: 108rem;
+  margin: 0 auto; }
+
+/* Layouts
+  => styles that used in all pages
+*/
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .header__descriptions {
+    width: 100%;
+    display: flex;
+    align-items: center; }
+    .header__descriptions--item {
+      display: flex;
+      flex: 0 0 20%;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #f1f1f1;
+      padding: .6rem; }
+      .header__descriptions--item:hover {
+        background-color: #f1f1f1; }
+      .header__descriptions--item:not(:last-child) {
+        border-right: 1px solid #f1f1f1; }
+      .header__descriptions--item img {
+        height: 3rem;
+        margin-right: 1rem; }
+  .header__mainContent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 8rem; }
+    .header__mainContent--logo {
+      flex: 0 0 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .header__mainContent--logo img {
+        height: 7rem; }
+    .header__mainContent--seacrh {
+      flex: 0 0 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .header__mainContent--seacrh input,
+      .header__mainContent--seacrh select,
+      .header__mainContent--seacrh button {
+        border: none;
+        outline: none;
+        height: 4rem;
+        padding: 1rem;
+        color: #878686;
+        background-color: #f1f1f1; }
+      .header__mainContent--seacrh select {
+        width: 20%; }
+      .header__mainContent--seacrh input {
+        width: 60%;
+        padding: 0 2rem;
+        position: relative; }
+        .header__mainContent--seacrh input::placeholder {
+          color: #878686; }
+        .header__mainContent--seacrh input::before {
+          content: '';
+          position: absolute;
+          width: 100px;
+          left: 0;
+          height: 90%;
+          background-color: #878686; }
+      .header__mainContent--seacrh button {
+        background-color: #ec4c4c;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .header__mainContent--seacrh button img {
+          height: 2rem; }
+    .header__mainContent--login {
+      flex: 0 0 10%; }
+    .header__mainContent--basket {
+      flex: 0 0 10%; }
+
+/* Components
+  => more specific styles
+*/
+/* pages
+  => styles for specific pages
+*/

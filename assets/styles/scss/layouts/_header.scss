@@ -1,0 +1,111 @@
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__descriptions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &--item {
+      display: flex;
+      flex: 0 0 20%;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid $default_gary_color;
+      padding: .6rem;
+
+      &:hover {
+        background-color: $default_gary_color;
+      }
+
+      &:not(:last-child) {
+        border-right: 1px solid $default_gary_color;
+      }
+
+      img {
+        height: 3rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__mainContent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 8rem;
+
+    &--logo {
+      flex: 0 0 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 7rem;
+      }
+    }
+
+    &--seacrh {
+      flex: 0 0 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      input,
+      select,
+      button {
+        border: none;
+        outline: none;
+        height: 4rem;
+        padding: 1rem;
+        color: $primary_gary_color;
+        background-color: $default_gary_color;
+      }
+
+      select {
+        width: 20%;
+      }
+
+      input {
+        width: 60%;
+        padding: 0 2rem;
+        position: relative;
+
+        &::placeholder {
+          color: $primary_gary_color;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100px;
+          left: 0;
+          height: 90%;
+          background-color: $primary_gary_color;
+        }
+      }
+
+      button {
+        background-color: $default_red_color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          height: 2rem;
+        }
+      }
+    }
+
+    &--login {
+      flex: 0 0 10%;
+    }
+
+    &--basket {
+      flex: 0 0 10%;
+    }
+  }
+}
