@@ -71,9 +71,9 @@ body,
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
-  @media screen and (min-width: 130rem) {
+  @media screen and (min-width: 119rem) {
     html {
-      font-size: 125%; } }
+      font-size: 81.25%; } }
 
 *,
 *:before,
