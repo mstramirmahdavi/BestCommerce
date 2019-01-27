@@ -53,6 +53,7 @@
         padding: 1rem;
         color: $primary_gary_color;
         background-color: $default_gary_color;
+        font-size: 1.2rem;
       }
 
       select {
@@ -88,6 +89,11 @@
 
     &--login {
       @include flex("", center, center, 0 0 10%, "");
+
+
+      button {
+        font-size: 1.1rem;
+      }
 
       span[class^="icon-"] {
         font-size: 1rem;

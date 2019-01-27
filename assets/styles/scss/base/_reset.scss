@@ -12,10 +12,9 @@ html {
   font-size: $rem_default;
   box-sizing: border-box;
 
-  /* @include responsive(bigscreen, "") {
+  @include responsive(bigscreen, "") {
     font-size: $rem_default * 2;
-    background-color: black;
-  } */
+  }
 }
 
 *,

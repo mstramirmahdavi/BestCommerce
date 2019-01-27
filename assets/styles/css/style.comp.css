@@ -58,11 +58,10 @@ body,
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
-  /* @include responsive(bigscreen, "") {
-    font-size: $rem_default * 2;
-    background-color: black;
-  } */ }
+  box-sizing: border-box; }
+  @media screen and (min-width: 130rem) {
+    html {
+      font-size: 125%; } }
 
 *,
 *:before,
@@ -143,7 +142,8 @@ body {
         height: 4rem;
         padding: 1rem;
         color: #878686;
-        background-color: #f1f1f1; }
+        background-color: #f1f1f1;
+        font-size: 1.2rem; }
       .header__mainContent--seacrh select {
         width: 20%; }
       .header__mainContent--seacrh input {
@@ -171,6 +171,8 @@ body {
       flex: 0 0 10%;
       justify-content: center;
       align-items: center; }
+      .header__mainContent--login button {
+        font-size: 1.1rem; }
       .header__mainContent--login span[class^="icon-"] {
         font-size: 1rem;
         margin-right: 1rem; }

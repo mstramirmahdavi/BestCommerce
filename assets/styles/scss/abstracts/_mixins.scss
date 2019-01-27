@@ -80,13 +80,13 @@
     }
 
     @if $breakpoint==desktop {
-      @media screen and (max-width: 160rem) {
+      @media screen and (max-width: 130rem) {
         @content;
       }
     }
 
     @if $breakpoint==bigscreen {
-      @media screen and (min-width: 160rem) {
+      @media screen and (min-width: 130rem) {
         @content;
       }
     }
