@@ -1,0 +1,23 @@
+@mixin flex($direction, $justify_content, $align_items, $flex_value, $wrap) {
+  display: flex;
+
+  @if ($flex_value !="") {
+    flex: $flex_value;
+  }
+
+  @if ($justify_content !="") {
+    justify-content: $justify_content;
+  }
+
+  @if ($direction !="") {
+    flex-direction: $direction;
+  }
+
+  @if ($align_items !="") {
+    align-items: $align_items;
+  }
+
+  @if ($wrap !="") {
+    flex-wrap: $wrap;
+  }
+}
