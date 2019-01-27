@@ -36,8 +36,8 @@
 */
 
 @import "./base/reset";
-@import "./base/grid";
 @import "./base/typography";
+@import "./base/grid";
 
 /* Layouts
   => styles that used in all pages
@@ -50,7 +50,7 @@
   => more specific styles
 */
 
-
+@import "./components/buttons";
 
 /* pages
   => styles for specific pages

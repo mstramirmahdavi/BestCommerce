@@ -1,3 +1,8 @@
+/* flexbox values 
+
+  @params ( flex-direction , justify-content . align-items , flex , flex-wrap )
+
+*/
 @mixin flex($direction, $justify_content, $align_items, $flex_value, $wrap) {
   display: flex;
 
@@ -20,4 +25,72 @@
   @if ($wrap !="") {
     flex-wrap: $wrap;
   }
+}
+
+/* responsive mixin 
+
+  @params (breakpoint , screen-size)
+
+  breakpoint => {
+    0 - 600 = phone
+    600 - 900 = tablet
+    900 - 1600 = desktop
+    1600 - infinity = bigscreen
+  }
+
+*/
+@mixin responsive($breakpoint, $size) {
+  @if $size !="" {
+    @if $breakpoint==phone {
+      @media screen and (max-width: $size) {
+        @content;
+      }
+    }
+
+    @if $breakpoint==tablet {
+      @media screen and (max-width: $size) {
+        @content;
+      }
+    }
+
+    @if $breakpoint==desktop {
+      @media screen and (max-width: $size) {
+        @content;
+      }
+    }
+
+    @if $breakpoint==bigscreen {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  }
+
+  @else {
+    @if $breakpoint==phone {
+      @media screen and (max-width: 60rem) {
+        @content;
+      }
+    }
+
+    @if $breakpoint==tablet {
+      @media screen and (max-width: 90rem) {
+        @content;
+      }
+    }
+
+    @if $breakpoint==desktop {
+      @media screen and (max-width: 160rem) {
+        @content;
+      }
+    }
+
+    @if $breakpoint==bigscreen {
+      @media screen and (min-width: 160rem) {
+        @content;
+      }
+    }
+  }
+
+
 }

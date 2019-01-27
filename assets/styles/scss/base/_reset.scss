@@ -11,10 +11,23 @@ body,
 html {
   font-size: $rem_default;
   box-sizing: border-box;
+
+  /* @include responsive(bigscreen, "") {
+    font-size: $rem_default * 2;
+    background-color: black;
+  } */
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }

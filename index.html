@@ -6,7 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <link rel="stylesheet" href="./assets/styles/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./assets/styles/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="./assets/styles/css/style-icons.css">
   <link rel="stylesheet" href="./assets/styles/css/style.css">
+
+
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/owl.carousel.min.js"></script>
   <title>Home Page</title>
 </head>
 
@@ -16,23 +23,49 @@
     <!-- HEADER DESCRIPTIONS -->
     <div class="header__descriptions">
       <div class="header__descriptions--item">
-        <img src="./assets/images/icons/medal.png" alt="">
+        <span class="icon-certificate">
+          <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span
+            class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span
+            class="path9"></span>
+        </span>
         <p>Originality guarantee</p>
       </div>
       <div class="header__descriptions--item">
-        <img src="./assets/images/icons/smartphone.png" alt="">
+        <span class="icon-smartphone">
+          <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span
+            class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span
+            class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span
+            class="path13"></span><span class="path14"></span><span class="path15"></span>
+        </span>
         <p>Warranty</p>
       </div>
       <div class="header__descriptions--item">
-        <img src="./assets/images/icons/payment-method.png" alt="">
+        <span class="icon-payment-method">
+          <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span
+            class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span
+            class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span
+            class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span
+            class="path17"></span><span class="path18"></span>
+        </span>
         <p>Payment at the place</p>
       </div>
       <div class="header__descriptions--item">
-        <img src="./assets/images/icons/24-hours.png" alt="">
+        <span class="icon-hours">
+          <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span
+            class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span
+            class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span
+            class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span>
+        </span>
         <p>24/hr Support</p>
       </div>
       <div class="header__descriptions--item">
-        <img src="./assets/images/icons/delivery-truck.png" alt="">
+        <span class="icon-delivery-truck">
+          <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span
+            class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span
+            class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span
+            class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span
+            class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span>
+        </span>
         <p>Free shipping</p>
       </div>
     </div>
@@ -42,7 +75,7 @@
       <div class="header__mainContent">
         <!-- HEADER LOGO -->
         <div class="header__mainContent--logo">
-          <img src="./assets/images/icons/logo.png" alt="">
+          <img src="./assets/images/img/logo.png" alt="">
         </div>
         <!-- HEADER LOGO END -->
         <!-- HEADER SEARCH -->
@@ -53,20 +86,122 @@
           </select>
           <input type="text" placeholder="Search product and goods">
           <button class="btn">
-            <img src="./assets/images/icons/search.png" alt="">
+            <span class="icon-search"></span>
           </button>
         </div>
         <!-- HEADER SEARCH END-->
         <div class="header__mainContent--login">
-          <button class="btn">Login/Signin</button>
+          <button class="btn">Rigester / Login <span class="icon-expand-button"></span></button>
         </div>
-        <div class="header__mainContent--basket"></div>
+        <div class="header__mainContent--basket">
+          <button class="btn red_bordered button"><span class="icon-shopping-basket"></span>Check out<span class="counter">0</span></button>
+        </div>
       </div>
       <!-- HEADER CONTENT END -->
     </div>
-    <div class="header__navigation"></div>
+    <div class="header__navigation">
+      <div class="row">
+        <nav>
+          <ul class="menu">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Dresses</a>
+            </li>
+            <li>
+              <a href="#">Intimates</a>
+            </li>
+            <li>
+              <a href="#">Jackets</a>
+            </li>
+            <li>
+              <a href="#">Jeans</a>
+            </li>
+            <li>
+              <a href="#">Loungewear & Sleepwear</a>
+            </li>
+            <li>
+              <a href="#">Pants</a>
+            </li>
+            <li>
+              <a href="#">Skirts</a>
+            </li>
+          </ul>
+          <ul class="special">
+            <li>
+              <a href="#">special</a>
+            </li>
+            <li>
+              <a href="#">special2</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
   <!-- HEADER END HERE -->
+
+  <!-- SLIDER START HERE -->
+
+  <section class="slider owl-carousel" id="main_slider">
+    <div class="slider__container" style="background-image: url('./assets/images/img/clark-street-mercantile-33931-unsplash.jpg')">
+      <div class="content">
+        <div class="content__title">
+          <p>NEW COLLECTION 2019!</p>
+        </div>
+        <div class="content__secondtitle">
+          <p>~ for ~</p>
+        </div>
+        <div class="content__subtitle">
+          <p>WOMEN & MEN</p>
+        </div>
+      </div>
+    </div>
+    <div class="slider__container" style="background-image: url('./assets/images/img/clark-street-mercantile-33931-unsplash.jpg')">
+      <div class="content">
+        <div class="content__title">
+          <p>NEW COLLECTION 2019!</p>
+        </div>
+        <div class="content__secondtitle">
+          <p>~ for ~</p>
+        </div>
+        <div class="content__subtitle">
+          <p>WOMEN & MEN</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDER END HERE -->
+
+
+  <script>
+    $(document).ready(function () {
+      $("#main_slider").owlCarousel({
+        loop: true,
+        slideSpeed: 300,
+        dots: false,
+        paginationSpeed: 1000,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        singleItem: true,
+        pagination: false,
+        rewindSpeed: 500,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          1000: {
+            items: 1
+          }
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

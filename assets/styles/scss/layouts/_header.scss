@@ -2,9 +2,9 @@
   width: 100%;
   @include flex(column, center, "", "", "");
 
-
   &__descriptions {
     width: 100%;
+    height: 4rem;
     @include flex("", "", center, "", "");
 
     &--item {
@@ -20,8 +20,8 @@
         border-right: 1px solid $default_gary_color;
       }
 
-      img {
-        height: 3rem;
+      span[class^="icon-"] {
+        font-size: 2.5rem;
         margin-right: 1rem;
       }
     }
@@ -33,10 +33,7 @@
     height: 8rem;
 
     &--logo {
-      flex: 0 0 10%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex("", "", center, 0 0 10%, wrap);
 
       img {
         height: 7rem;
@@ -44,10 +41,7 @@
     }
 
     &--seacrh {
-      flex: 0 0 70%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex("", center, center, 0 0 65%, "");
 
       input,
       select,
@@ -85,22 +79,89 @@
 
       button {
         background-color: $default_red_color;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-          height: 2rem;
-        }
+        @include flex("", center, center, "", "");
+        color: $white_color;
+        font-size: 2rem;
       }
     }
 
     &--login {
-      flex: 0 0 10%;
+      @include flex("", center, center, 0 0 10%, "");
+
+      span[class^="icon-"] {
+        font-size: 1rem;
+        margin-right: 1rem;
+      }
+
     }
 
     &--basket {
-      flex: 0 0 10%;
+      @include flex("", flex-end, center, 0 0 15%, "");
+
+      .button {
+        color: $default_red_color;
+        padding: 1rem 0rem;
+        font-size: 1rem;
+        @include flex("", center, center, "", "");
+
+
+        span {
+          margin: 0 1rem;
+
+          &.counter {
+            border-radius: 50%;
+            background-color: $default_red_color;
+            color: $white_color;
+            @include flex("", center, center, "", "");
+            width: 2rem;
+            height: 2rem;
+          }
+
+          &[class^="icon-"] {
+            font-size: 2rem;
+            margin-right: 1rem;
+          }
+        }
+
+      }
+    }
+  }
+
+  &__navigation {
+    width: 100%;
+    background-color: $header_default_gary_color;
+
+
+    nav {
+      @include flex("", space-between, center, "", "");
+      height: 4rem;
+
+      ul {
+        @include flex("", space-between, center, "", "");
+        height: 100%;
+        font-size: 1.2rem;
+
+        li {
+          height: 100%;
+
+          &:hover {
+            background-color: $header_hover_gary_color;
+          }
+
+          a {
+            color: $white_color;
+            padding: 0 1rem;
+            height: 100%;
+            width: 100%;
+            border-bottom: 3px solid transparent;
+            @include flex("", center, center, "", "");
+
+            &:active {
+              border-bottom: 3px solid red;
+            }
+          }
+        }
+      }
     }
   }
 }

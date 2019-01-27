@@ -1,0 +1,33 @@
+.slider {
+  width: 100%;
+  height: calc(100vh - 16rem);
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    @include flex("", center, center, "", "");
+
+    .content {
+      text-align: center;
+
+      &__title {
+        color: $white_color;
+        font-size: 4rem;
+      }
+
+      &__secondtitle {
+        color: $white_color;
+        font-size: 3rem;
+      }
+
+      &__subtitle {
+        color: $slider_yellow_color;
+        font-size: 4rem;
+      }
+    }
+  }
+}
+#main_slider .owl-stage-outer,
+#main_slider .owl-stage,
+#main_slider .owl-item {
+  height: 100%; }

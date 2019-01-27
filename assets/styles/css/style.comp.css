@@ -1,0 +1,274 @@
+/* 
+  => Author : Seyed Amir Mahdavi
+  => Email : seyedamirmahdavi1996@gmail.com
+
+
+  => Guide : [
+    npm install ( to install all devDependencies )
+
+    to deploy or change 
+    npm run watch:scss ( to compile scss files to css on scss files changed )
+
+
+    to compile step by step manually
+    -- npm run compile:scss ( to compile scss files to css just once )
+    -- npm run concat:css ( to concat all files together ==== if you want add your own style file so you have to change path in package.json fot concat option ====)
+    -- npm run prefix:css ( to support for all old and modern browsers )
+    -- npm run compress:css ( to minify final css file )
+
+
+    to run all command above 
+    -- npm run build:css 
+  ]
+*/
+/* Abstract 
+  => nothing generate from this files
+  => all variables , functions , mixins are here
+*/
+/* colors */
+/* default values */
+/* flexbox values 
+
+  @params ( flex-direction , justify-content . align-items , flex , flex-wrap )
+
+*/
+/* responsive mixin 
+
+  @params (breakpoint , screen-size)
+
+  breakpoint => {
+    0 - 600 = phone
+    600 - 900 = tablet
+    900 - 1600 = desktop
+    1600 - infinity = bigscreen
+  }
+
+*/
+/* Base
+ => all general styles is here 
+*/
+/* 
+  remove default values of browsers
+*/
+html,
+body,
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  /* @include responsive(bigscreen, "") {
+    font-size: $rem_default * 2;
+    background-color: black;
+  } */ }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+@font-face {
+  font-family: "MyriadPro";
+  src: url("./../../fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("./../../fonts/MyriadPro-Regular.otf") format("opentype"), url("./../../fonts/MyriadPro-Regular.woff") format("woff"), url("./../../fonts/MyriadPro-Regular.ttf") format("truetype"), url("./../../fonts/MyriadPro-Regular.svg#MyriadPro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+html,
+body {
+  font-family: "MyriadPro"; }
+
+.row {
+  max-width: 120rem;
+  min-width: 120rem;
+  margin: 0 auto; }
+
+/* Layouts
+  => styles that used in all pages
+*/
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .header__descriptions {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center; }
+    .header__descriptions--item {
+      display: flex;
+      flex: 0 0 20%;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #f1f1f1;
+      padding: .6rem; }
+      .header__descriptions--item:hover {
+        background-color: #f1f1f1; }
+      .header__descriptions--item:not(:last-child) {
+        border-right: 1px solid #f1f1f1; }
+      .header__descriptions--item span[class^="icon-"] {
+        font-size: 2.5rem;
+        margin-right: 1rem; }
+  .header__mainContent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 8rem; }
+    .header__mainContent--logo {
+      display: flex;
+      flex: 0 0 10%;
+      align-items: center;
+      flex-wrap: wrap; }
+      .header__mainContent--logo img {
+        height: 7rem; }
+    .header__mainContent--seacrh {
+      display: flex;
+      flex: 0 0 65%;
+      justify-content: center;
+      align-items: center; }
+      .header__mainContent--seacrh input,
+      .header__mainContent--seacrh select,
+      .header__mainContent--seacrh button {
+        border: none;
+        outline: none;
+        height: 4rem;
+        padding: 1rem;
+        color: #878686;
+        background-color: #f1f1f1; }
+      .header__mainContent--seacrh select {
+        width: 20%; }
+      .header__mainContent--seacrh input {
+        width: 60%;
+        padding: 0 2rem;
+        position: relative; }
+        .header__mainContent--seacrh input::placeholder {
+          color: #878686; }
+        .header__mainContent--seacrh input::before {
+          content: '';
+          position: absolute;
+          width: 100px;
+          left: 0;
+          height: 90%;
+          background-color: #878686; }
+      .header__mainContent--seacrh button {
+        background-color: #ec4c4c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        font-size: 2rem; }
+    .header__mainContent--login {
+      display: flex;
+      flex: 0 0 10%;
+      justify-content: center;
+      align-items: center; }
+      .header__mainContent--login span[class^="icon-"] {
+        font-size: 1rem;
+        margin-right: 1rem; }
+    .header__mainContent--basket {
+      display: flex;
+      flex: 0 0 15%;
+      justify-content: flex-end;
+      align-items: center; }
+      .header__mainContent--basket .button {
+        color: #ec4c4c;
+        padding: 1rem 0rem;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .header__mainContent--basket .button span {
+          margin: 0 1rem; }
+          .header__mainContent--basket .button span.counter {
+            border-radius: 50%;
+            background-color: #ec4c4c;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2rem;
+            height: 2rem; }
+          .header__mainContent--basket .button span[class^="icon-"] {
+            font-size: 2rem;
+            margin-right: 1rem; }
+  .header__navigation {
+    width: 100%;
+    background-color: #333333; }
+    .header__navigation nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 4rem; }
+      .header__navigation nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        font-size: 1.2rem; }
+        .header__navigation nav ul li {
+          height: 100%; }
+          .header__navigation nav ul li:hover {
+            background-color: #4c4c4c; }
+          .header__navigation nav ul li a {
+            color: #ffffff;
+            padding: 0 1rem;
+            height: 100%;
+            width: 100%;
+            border-bottom: 3px solid transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .header__navigation nav ul li a:active {
+              border-bottom: 3px solid red; }
+
+/* Components
+  => more specific styles
+*/
+.btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer; }
+  .btn.red_bordered {
+    border: 1px solid #ec4c4c; }
+  .btn.red_btn {
+    background-color: #ec4c4c; }
+  .btn.green_btn {
+    background-color: #2ac48f; }
+
+/* pages
+  => styles for specific pages
+*/
+.slider {
+  width: 100%;
+  height: calc(100vh - 16rem); }
+  .slider__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .slider__container .content {
+      text-align: center; }
+      .slider__container .content__title {
+        color: #ffffff;
+        font-size: 4rem; }
+      .slider__container .content__secondtitle {
+        color: #ffffff;
+        font-size: 3rem; }
+      .slider__container .content__subtitle {
+        color: #fff8a8;
+        font-size: 4rem; }
+
+#main_slider .owl-stage-outer,
+#main_slider .owl-stage,
+#main_slider .owl-item {
+  height: 100%; }

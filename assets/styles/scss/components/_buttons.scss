@@ -1,4 +1,18 @@
 .btn {
   border: none;
   outline: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &.red_bordered {
+    border: 1px solid $default_red_color;
+  }
+
+  &.red_btn {
+    background-color: $default_red_color;
+  }
+
+  &.green_btn {
+    background-color: $default_green_color;
+  }
 }
