@@ -7,6 +7,12 @@ $default_green_color: #2ac48f;
 $default_gary_color: #f1f1f1;
 $primary_gary_color: #878686;
 
+$font_gray_color: #7c7c7c;
+
+
+$box_gray_color: #7c7c7c;
+
+
 
 $header_default_gary_color: #333333;
 $header_hover_gary_color: #4c4c4c;
@@ -21,3 +27,4 @@ $footer_font_gary_color: #dddddd;
 $rem_default: 62.5%;
 $font_default: "MyriadPro";
 $max_width_value: 120rem;
+$box_shadow: 0px 0px 10px $box_gray_color;
