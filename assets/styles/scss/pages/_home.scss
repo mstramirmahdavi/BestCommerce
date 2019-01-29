@@ -1,0 +1,36 @@
+.special-offres {
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: $special_gradiant_dark;
+    background: -moz-linear-gradient(left, $special_gradiant_dark 0%, $special_gradiant_light 45%, $special_gradiant_darken 100%);
+    background: -webkit-linear-gradient(left, $special_gradiant_dark 0%, $special_gradiant_light 45%, $special_gradiant_darken 100%);
+    background: linear-gradient(to right, $special_gradiant_dark 0%, $special_gradiant_light 45%, $special_gradiant_darken 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$special_gradiant_dark', endColorstr='$special_gradiant_darken', GradientType=1);
+  }
+
+  &__header {
+    text-align: center;
+    padding: 1rem 0 4rem;
+    color: $white_color;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    @include flex("", space-between, center, "", "");
+
+    .owl-dot.active span {
+      background-color: red !important;
+    }
+  }
+}

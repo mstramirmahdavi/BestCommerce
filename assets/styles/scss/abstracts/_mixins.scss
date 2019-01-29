@@ -42,25 +42,25 @@
 @mixin responsive($breakpoint, $size) {
   @if $size !="" {
     @if $breakpoint==phone {
-      @media screen and (max-width: $size) {
+      @media only screen and (max-width: $size) {
         @content;
       }
     }
 
     @if $breakpoint==tablet {
-      @media screen and (max-width: $size) {
+      @media only screen and (max-width: $size) {
         @content;
       }
     }
 
     @if $breakpoint==desktop {
-      @media screen and (max-width: $size) {
+      @media only screen and (max-width: $size) {
         @content;
       }
     }
 
     @if $breakpoint==bigscreen {
-      @media screen and (min-width: $size) {
+      @media only screen and (min-width: $size) {
         @content;
       }
     }
@@ -68,25 +68,25 @@
 
   @else {
     @if $breakpoint==phone {
-      @media screen and (max-width: 60rem) {
+      @media only screen and (max-width: 60rem) {
         @content;
       }
     }
 
     @if $breakpoint==tablet {
-      @media screen and (max-width: 90rem) {
+      @media only screen and (max-width: 90rem) {
         @content;
       }
     }
 
     @if $breakpoint==desktop {
-      @media screen and (max-width: 119rem) {
+      @media only screen and (max-width: 119rem) {
         @content;
       }
     }
 
     @if $breakpoint==bigscreen {
-      @media screen and (min-width: 119rem) {
+      @media only screen and (min-width: 119rem) {
         @content;
       }
     }
