@@ -2,6 +2,7 @@
   width: 100%;
   padding: 2rem;
   position: relative;
+  background-color: $default_bg_gary_color;
 
   &::after {
     content: '';
@@ -10,7 +11,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
     background: $special_gradiant_dark;
     background: -moz-linear-gradient(left, $special_gradiant_dark 0%, $special_gradiant_light 45%, $special_gradiant_darken 100%);
     background: -webkit-linear-gradient(left, $special_gradiant_dark 0%, $special_gradiant_light 45%, $special_gradiant_darken 100%);
@@ -24,13 +25,90 @@
     color: $white_color;
     font-size: 1.5rem;
     text-transform: uppercase;
+    position: relative;
+    z-index: 1;
   }
 
   &__content {
     @include flex("", space-between, center, "", "");
 
     .owl-dot.active span {
-      background-color: red !important;
+      background-color: $default_red_color !important;
+    }
+  }
+}
+
+.daily-offres {
+  width: 100%;
+  padding: 1rem;
+
+  &__container {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid $border_gary_color;
+    position: relative;
+
+    &--header {
+      width: 20rem;
+      padding: 1rem;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $default_red_color;
+      border-bottom-left-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
+      font-size: 1.5rem;
+      text-align: center;
+      color: $white_color;
+    }
+
+    &--content {
+      padding: 1rem 5rem;
+      margin-top: 4rem;
+      display: flex;
+
+      .owl-dots {
+        margin: 1rem 0 0 0;
+      }
+
+      .owl-dot.active span {
+        background-color: $default_red_color !important;
+      }
+
+      .owl-nav {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        right: 0;
+        display: block;
+        width: 100%;
+        font-size: 3rem;
+
+        button {
+          outline: none;
+
+          &:hover {
+            background: transparent !important;
+            color: $default_red_color !important;
+          }
+
+        }
+
+        .owl-prev {
+          left: 5px;
+          width: 3rem;
+          height: 3rem;
+          position: absolute;
+        }
+
+        .owl-next {
+          right: 5px;
+          width: 3rem;
+          height: 3rem;
+          position: absolute;
+        }
+      }
     }
   }
 }

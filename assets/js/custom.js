@@ -59,4 +59,23 @@ $(document).ready(function () {
       }
     }
   });
+  $("#dailyoffres").owlCarousel({
+    dots: true,
+    margin: 75,
+    nav: true,
+    slideSpeed: 2000,
+    rewindSpeed: 1000,
+    navText: ['<span class="icon-left-arrow"></span>', '<span class="icon-right-arrow"></span>'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 2
+      }
+    }
+  });
 });
