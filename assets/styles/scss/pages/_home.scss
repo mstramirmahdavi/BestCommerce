@@ -112,3 +112,30 @@
     }
   }
 }
+
+.blog {
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+  background-color: $default_bg_gary_color;
+
+  &_title {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40rem;
+      height: 4px;
+      background-color: $black_color;
+    }
+  }
+  &_content {
+    @include flex("", "", "", "", wrap);
+  }
+}
