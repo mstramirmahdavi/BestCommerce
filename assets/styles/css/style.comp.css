@@ -248,6 +248,19 @@ body {
   .btn.green_btn {
     background-color: #2ac48f; }
 
+.discounted {
+  position: relative;
+  color: #ec4c4c; }
+  .discounted::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 110%;
+    background-color: #d0d0d0;
+    transform: rotate(25deg);
+    top: 0;
+    transform-origin: 0; }
+
 .heroSlider {
   width: 100%;
   height: calc(100vh - 16rem); }
@@ -374,6 +387,7 @@ body {
   align-items: center;
   padding: 1rem;
   margin-bottom: 1rem;
+  margin-left: 0.15rem;
   box-shadow: 0px 0px 10px #7c7c7c;
   position: relative; }
   .specialCard .special-headerbg {
@@ -389,8 +403,8 @@ body {
       height: 100%;
       background-image: url("./../../images/img/brilliant-seamless-pattern-diamond-triangle-vector-11685959.jpg");
       background-position: center;
-      background-size: cover;
-      opacity: .3; }
+      background-size: 9rem;
+      opacity: 0.3; }
   .specialCard .special-header {
     text-transform: uppercase;
     font-size: 2rem;
@@ -435,13 +449,92 @@ body {
     width: 100%;
     margin-bottom: 1rem; }
 
+.dailyoffresCard {
+  width: 50rem;
+  display: flex;
+  padding: 1rem;
+  border: 1px solid #d0d0d0; }
+  .dailyoffresCard .image {
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .dailyoffresCard .image img {
+      width: 100%; }
+  .dailyoffresCard .details {
+    width: 30rem;
+    display: flex;
+    flex-direction: column; }
+    .dailyoffresCard .details .title {
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 2rem;
+      font-weight: 500; }
+    .dailyoffresCard .details .prices {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      font-size: 1.5rem;
+      font-weight: 500; }
+      .dailyoffresCard .details .prices .price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700; }
+        .dailyoffresCard .details .prices .price .normal {
+          margin-left: 1rem; }
+      .dailyoffresCard .details .prices .off {
+        background-color: #ec4c4c;
+        color: #ffffff;
+        padding: .5rem 1rem;
+        border-radius: 2rem;
+        font-size: 1.2rem; }
+    .dailyoffresCard .details .detail ul {
+      padding: 2rem; }
+      .dailyoffresCard .details .detail ul li {
+        position: relative;
+        font-size: 1.1rem; }
+        .dailyoffresCard .details .detail ul li::before {
+          content: '';
+          position: absolute;
+          left: -2rem;
+          height: 1rem;
+          width: 1rem;
+          border-radius: 50%;
+          background-color: #d0d0d0; }
+    .dailyoffresCard .details .buttons {
+      text-align: center; }
+      .dailyoffresCard .details .buttons .button {
+        font-size: 1.5rem;
+        padding: .5rem 3rem; }
+    .dailyoffresCard .details .counter {
+      padding: 1rem 0; }
+      .dailyoffresCard .details .counter__container {
+        color: #333;
+        text-align: center; }
+      .dailyoffresCard .details .counter #head {
+        color: #7c7c7c;
+        font-size: 1.2rem; }
+      .dailyoffresCard .details .counter ul {
+        font-size: 2rem; }
+      .dailyoffresCard .details .counter li {
+        display: inline-block;
+        font-size: 1.5em;
+        list-style-type: none;
+        text-transform: uppercase; }
+        .dailyoffresCard .details .counter li span {
+          display: block;
+          font-size: 2.4rem;
+          font-weight: 900; }
+
 /* pages
   => styles for specific pages
 */
 .special-offres {
   width: 100%;
   padding: 2rem;
-  position: relative; }
+  position: relative;
+  background-color: #eaeaea; }
   .special-offres::after {
     content: '';
     width: 100%;
@@ -449,7 +542,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
     background: #193a43;
     background: -moz-linear-gradient(left, #193a43 0%, #175667 45%, #1b2b30 100%);
     background: -webkit-linear-gradient(left, #193a43 0%, #175667 45%, #1b2b30 100%);
@@ -460,10 +553,65 @@ body {
     padding: 1rem 0 4rem;
     color: #ffffff;
     font-size: 1.5rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1; }
   .special-offres__content {
     display: flex;
     justify-content: space-between;
     align-items: center; }
     .special-offres__content .owl-dot.active span {
-      background-color: red !important; }
+      background-color: #ec4c4c !important; }
+
+.daily-offres {
+  width: 100%;
+  padding: 1rem; }
+  .daily-offres__container {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #d0d0d0;
+    position: relative; }
+    .daily-offres__container--header {
+      width: 20rem;
+      padding: 1rem;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ec4c4c;
+      border-bottom-left-radius: 1.5rem;
+      border-bottom-right-radius: 1.5rem;
+      font-size: 1.5rem;
+      text-align: center;
+      color: #ffffff; }
+    .daily-offres__container--content {
+      padding: 1rem 5rem;
+      margin-top: 4rem;
+      display: flex; }
+      .daily-offres__container--content .owl-dots {
+        margin: 1rem 0 0 0; }
+      .daily-offres__container--content .owl-dot.active span {
+        background-color: #ec4c4c !important; }
+      .daily-offres__container--content .owl-nav {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        right: 0;
+        display: block;
+        width: 100%;
+        font-size: 3rem; }
+        .daily-offres__container--content .owl-nav button {
+          outline: none; }
+          .daily-offres__container--content .owl-nav button:hover {
+            background: transparent !important;
+            color: #ec4c4c !important; }
+        .daily-offres__container--content .owl-nav .owl-prev {
+          left: 5px;
+          width: 3rem;
+          height: 3rem;
+          position: absolute; }
+        .daily-offres__container--content .owl-nav .owl-next {
+          right: 5px;
+          width: 3rem;
+          height: 3rem;
+          position: absolute; }
