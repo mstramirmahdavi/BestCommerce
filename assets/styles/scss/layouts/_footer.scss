@@ -87,16 +87,16 @@
                 position: relative;
                 font-size: 1.1rem;
                 margin-left: 2rem;
-                padding: .3rem;
+                padding: 0.3rem;
 
                 &::before {
                   content: '\e93f';
-                  font-family: "icomoon";
+                  font-family: 'icomoon';
                   position: absolute;
                   left: -2rem;
                   top: 50%;
                   transform: translateY(-50%);
-                  font-size: .9rem;
+                  font-size: 0.9rem;
                   color: $footer_title_font_gary_color;
                 }
 

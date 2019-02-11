@@ -135,6 +135,7 @@
       background-color: $black_color;
     }
   }
+
   &_content {
     @include flex("", "", "", "", wrap);
   }

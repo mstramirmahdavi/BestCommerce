@@ -1,6 +1,7 @@
 .discounted {
   position: relative;
   color: $default_red_color;
+
   &::before {
     content: '';
     position: absolute;
