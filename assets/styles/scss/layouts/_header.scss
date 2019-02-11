@@ -110,6 +110,7 @@
         padding: 1rem 0rem;
         font-size: 1.1rem;
         @include flex("", center, center, "", "");
+        overflow: hidden;
 
 
         span {
@@ -142,20 +143,31 @@
     nav {
       @include flex("", space-between, center, "", "");
       height: 4rem;
+      position: relative;
 
-      ul {
+      ul.menu,
+      ul.special {
         @include flex("", space-between, center, "", "");
         height: 100%;
         font-size: 1.3rem;
 
-        li {
+        >li {
           height: 100%;
+          border-bottom: 3px solid transparent;
+          padding-top: 3px;
 
           &:hover {
             background-color: $header_hover_gary_color;
+            border-bottom: 3px solid $default_red_color;
+
+            .megamenu {
+              visibility: visible;
+              opacity: 1;
+              z-index: 3;
+            }
           }
 
-          a {
+          >a {
             color: $white_color;
             padding: 0 1rem;
             height: 100%;
@@ -163,9 +175,6 @@
             @include flex("", center, center, "", "");
             box-sizing: border-box;
 
-            &:active {
-              border-bottom: 3px solid red;
-            }
           }
         }
       }
