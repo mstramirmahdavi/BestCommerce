@@ -296,15 +296,15 @@ body {
             position: relative;
             font-size: 1.1rem;
             margin-left: 2rem;
-            padding: .3rem; }
+            padding: 0.3rem; }
             .footer__container__content--info .item .list ul li::before {
               content: '\e93f';
-              font-family: "icomoon";
+              font-family: 'icomoon';
               position: absolute;
               left: -2rem;
               top: 50%;
               transform: translateY(-50%);
-              font-size: .9rem;
+              font-size: 0.9rem;
               color: #c3c3c3; }
             .footer__container__content--info .item .list ul li a {
               color: #dddddd; }
