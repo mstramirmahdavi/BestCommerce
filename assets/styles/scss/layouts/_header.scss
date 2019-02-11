@@ -93,11 +93,14 @@
 
       button {
         font-size: 1.1rem;
+
+        &:hover .loginAndRegisterModal{
+          display: block;
+        }
       }
 
       span[class^="icon-"] {
         font-size: 1rem;
-        margin-right: 1rem;
       }
 
     }

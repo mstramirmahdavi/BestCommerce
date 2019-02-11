@@ -1,0 +1,33 @@
+.input_row {
+  width: 100%;
+  padding: 0 1rem;
+  text-align: left;
+
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  label {
+    margin-bottom: 1rem;
+  }
+
+  input {
+    width: 100%;
+    padding: 1rem .5rem 1rem 3rem;
+    margin-top: 1rem;
+    outline: none;
+  }
+
+  span {
+    margin-left: .7rem;
+    margin-top: -3rem;
+    position: absolute;
+    font-size: 2rem !important;
+  }
+
+  .button {
+    width: 100%;
+    padding: 1rem 0;
+    display: block;
+  }
+}

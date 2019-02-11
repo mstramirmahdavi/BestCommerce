@@ -59,11 +59,17 @@
   => more specific styles
 */
 
+//inputs
+@import "./components/inputstyle";
+
 //buttons
 @import "./components/buttons";
 
 //megamenu
 @import "./components/megamenu";
+
+//register and login modal
+@import "./components/registerloginmodal";
 
 //discounted
 @import "./components/discounted";

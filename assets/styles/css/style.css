@@ -173,9 +173,10 @@ body {
       align-items: center; }
       .header__mainContent--login button {
         font-size: 1.1rem; }
+        .header__mainContent--login button:hover .loginAndRegisterModal {
+          display: block; }
       .header__mainContent--login span[class^="icon-"] {
-        font-size: 1rem;
-        margin-right: 1rem; }
+        font-size: 1rem; }
     .header__mainContent--basket {
       display: flex;
       flex: 0 0 15%;
@@ -336,6 +337,29 @@ body {
 /* Components
   => more specific styles
 */
+.input_row {
+  width: 100%;
+  padding: 0 1rem;
+  text-align: left; }
+  .input_row:not(:first-child) {
+    margin-top: 1rem; }
+  .input_row label {
+    margin-bottom: 1rem; }
+  .input_row input {
+    width: 100%;
+    padding: 1rem .5rem 1rem 3rem;
+    margin-top: 1rem;
+    outline: none; }
+  .input_row span {
+    margin-left: .7rem;
+    margin-top: -3rem;
+    position: absolute;
+    font-size: 2rem !important; }
+  .input_row .button {
+    width: 100%;
+    padding: 1rem 0;
+    display: block; }
+
 .btn {
   border: none;
   outline: none;
@@ -360,6 +384,9 @@ body {
       color: #ffffff; }
       .btn.red_bordered:hover::after {
         width: 200%; }
+  .btn.loginBtn {
+    height: 4rem;
+    position: relative; }
   .btn.red_btn {
     background-color: #ec4c4c;
     color: #ffffff; }
@@ -541,6 +568,38 @@ body {
                 bottom: 0;
                 left: 0;
                 transition: .3s; }
+
+.loginAndRegisterModal {
+  width: 25rem;
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  display: none; }
+  .loginAndRegisterModal .register .topArrow {
+    width: 100%;
+    height: 1.5rem;
+    border-bottom: 2px solid #2ac48f;
+    position: relative; }
+    .loginAndRegisterModal .register .topArrow::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid #2ac48f;
+      position: absolute;
+      bottom: 0;
+      right: 4rem; }
+  .loginAndRegisterModal .register-header {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 1.5rem 0;
+    font-size: 1.2rem; }
+  .loginAndRegisterModal .register-content {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1.5rem 0;
+    font-size: 1.2rem; }
 
 .discounted {
   position: relative;
