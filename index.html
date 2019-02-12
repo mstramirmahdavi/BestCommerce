@@ -94,27 +94,66 @@
         <div class="header__mainContent--login">
           <button class="btn loginBtn">Rigester / Login <span class="icon-expand-button"></span>
             <div class="loginAndRegisterModal">
-              <div class="register">
-                <div class="topArrow"></div>
-                <div class="register-header">Register to BestCommerc</div>
-                <div class="register-content">
+              <div class="registerCont">
+                <div class="topArrow login"></div>
+                <div class="loginAndRegisterModal-header">Register to BestCommerce</div>
+                <div class="loginAndRegisterModal-content">
                   <div class="input_row">
                     <label for="username">Email or Mobile number</label>
-                    <input type="text" name="username" id="username">
-                    <span class="icon-avatar"></span>
+                    <div class="inputCont input">
+                      <input type="text" name="username" id="username">
+                      <span class="icon-avatar"></span>
+                    </div>
                   </div>
                   <div class="input_row">
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
-                    <span class="icon-key"></span>
+                    <div class="inputCont input">
+                      <input type="password" name="password" id="password">
+                      <span class="icon-key"></span>
+                    </div>
                   </div>
                   <div class="input_row">
-                    <a class="btn green_btn button">order<span class="icon-shopping-basket"></span></a>
+                    <div class="inputCont button">
+                      <a class="btn green_btn blockbtn">Register to BestCommerce<span class="icon-login"></span></a>
+                    </div>
                   </div>
                 </div>
-                <div class="register-footer"></div>
+                <div class="loginAndRegisterModal-footer">
+                  <a class="btn blockbtn register">Do you have account? <span>Login Now</span></a>
+                </div>
               </div>
-
+              <div class="loginCont">
+                <div class="topArrow register"></div>
+                <div class="loginAndRegisterModal-header">Login to BestCommerce</div>
+                <div class="loginAndRegisterModal-content">
+                  <div class="input_row">
+                    <label for="username">Email or Mobile number</label>
+                    <div class="inputCont input">
+                      <input type="text" name="username" id="username">
+                      <span class="icon-avatar"></span>
+                    </div>
+                  </div>
+                  <div class="input_row">
+                    <label for="password">Password</label>
+                    <div class="inputCont input">
+                      <input type="password" name="password" id="password">
+                      <span class="icon-key"></span>
+                    </div>
+                  </div>
+                  <div class="input_row">
+                    <div class="inputCont button">
+                      <a class="btn red_btn blockbtn">Login to BestCommerce<span class="icon-login"></span></a>
+                    </div>
+                  </div>
+                  <div class="input_row">
+                    <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+                    <label for="styled-checkbox-1">Remember login information</label>
+                  </div>
+                </div>
+                <div class="loginAndRegisterModal-footer">
+                  <a class="btn blockbtn login">Are You New User? <span>Register Now</span></a>
+                </div>
+              </div>
             </div>
           </button>
         </div>

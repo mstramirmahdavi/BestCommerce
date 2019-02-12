@@ -78,4 +78,17 @@ $(document).ready(function () {
       }
     }
   });
+
+
+  $(".loginAndRegisterModal-footer").click(function () {
+    if (!$(".loginAndRegisterModal").hasClass("registerOpened")) {
+      $(".registerCont").fadeIn();
+      $(".loginCont").fadeOut();
+      $(".loginAndRegisterModal").addClass("registerOpened");
+    } else {
+      $(".registerCont").fadeOut();
+      $(".loginCont").fadeIn();
+      $(".loginAndRegisterModal").removeClass("registerOpened");
+    }
+  });
 });

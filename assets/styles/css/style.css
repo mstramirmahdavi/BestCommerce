@@ -174,7 +174,9 @@ body {
       .header__mainContent--login button {
         font-size: 1.1rem; }
         .header__mainContent--login button:hover .loginAndRegisterModal {
-          display: block; }
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0rem); }
       .header__mainContent--login span[class^="icon-"] {
         font-size: 1rem; }
     .header__mainContent--basket {
@@ -343,22 +345,65 @@ body {
   text-align: left; }
   .input_row:not(:first-child) {
     margin-top: 1rem; }
-  .input_row label {
-    margin-bottom: 1rem; }
-  .input_row input {
-    width: 100%;
-    padding: 1rem .5rem 1rem 3rem;
-    margin-top: 1rem;
-    outline: none; }
-  .input_row span {
-    margin-left: .7rem;
-    margin-top: -3rem;
+  .input_row .inputCont {
+    position: relative; }
+    .input_row .inputCont.input input {
+      width: 100%;
+      padding: 1rem .5rem 1rem 3rem;
+      margin-top: 1rem;
+      outline: none; }
+    .input_row .inputCont.input span {
+      margin-left: .7rem;
+      margin-top: -3rem;
+      position: absolute;
+      font-size: 2rem !important; }
+    .input_row .inputCont.button .blockbtn {
+      width: 100%;
+      padding: 1rem 0;
+      display: block;
+      text-align: center;
+      position: relative; }
+    .input_row .inputCont.button span {
+      position: absolute;
+      top: 60%;
+      transform: translateY(-65%);
+      right: .7rem;
+      font-size: 2rem !important; }
+  .input_row .styled-checkbox {
     position: absolute;
-    font-size: 2rem !important; }
-  .input_row .button {
-    width: 100%;
-    padding: 1rem 0;
-    display: block; }
+    opacity: 0; }
+    .input_row .styled-checkbox + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center; }
+    .input_row .styled-checkbox + label:before {
+      content: '';
+      margin-right: 1rem;
+      display: inline-block;
+      vertical-align: middle;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: #ec4c4c; }
+    .input_row .styled-checkbox:checked + label:before {
+      background: #ec4c4c; }
+    .input_row .styled-checkbox:disabled + label {
+      color: #b8b8b8;
+      cursor: auto; }
+    .input_row .styled-checkbox:disabled + label:before {
+      box-shadow: none;
+      background: #ddd; }
+    .input_row .styled-checkbox:checked + label:after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 7px;
+      background: white;
+      width: 2px;
+      height: 2px;
+      box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+      transform: rotate(45deg); }
 
 .btn {
   border: none;
@@ -573,33 +618,63 @@ body {
   width: 25rem;
   position: absolute;
   z-index: 4;
-  right: 0;
-  display: none; }
-  .loginAndRegisterModal .register .topArrow {
+  right: -2.2rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+  transform: translateY(-2rem); }
+  .loginAndRegisterModal .registerCont {
+    display: block; }
+  .loginAndRegisterModal .registerCont,
+  .loginAndRegisterModal .loginCont {
+    position: absolute; }
+  .loginAndRegisterModal .topArrow {
     width: 100%;
     height: 1.5rem;
-    border-bottom: 2px solid #2ac48f;
     position: relative; }
-    .loginAndRegisterModal .register .topArrow::after {
+    .loginAndRegisterModal .topArrow.login {
+      border-bottom: 5px solid #2ac48f; }
+      .loginAndRegisterModal .topArrow.login::after {
+        border-bottom: 5px solid #2ac48f; }
+    .loginAndRegisterModal .topArrow.register {
+      border-bottom: 5px solid #ec4c4c; }
+      .loginAndRegisterModal .topArrow.register::after {
+        border-bottom: 5px solid #ec4c4c; }
+    .loginAndRegisterModal .topArrow::after {
       content: '';
       width: 0;
       height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-bottom: 5px solid #2ac48f;
+      border-bottom: 5px solid transparent;
       position: absolute;
       bottom: 0;
       right: 4rem; }
-  .loginAndRegisterModal .register-header {
+  .loginAndRegisterModal-header {
     width: 100%;
     background-color: #f2f2f2;
     padding: 1.5rem 0;
     font-size: 1.2rem; }
-  .loginAndRegisterModal .register-content {
+  .loginAndRegisterModal-content {
     width: 100%;
     background-color: #ffffff;
     padding: 1.5rem 0;
     font-size: 1.2rem; }
+  .loginAndRegisterModal-footer {
+    width: 100%;
+    background-color: #ffffff; }
+    .loginAndRegisterModal-footer a {
+      width: 100%;
+      padding: 1.5rem 0;
+      display: block;
+      font-size: 1rem; }
+      .loginAndRegisterModal-footer a.register {
+        background-color: rgba(236, 76, 76, 0.5); }
+      .loginAndRegisterModal-footer a.login {
+        background-color: rgba(42, 196, 143, 0.5); }
+      .loginAndRegisterModal-footer a span {
+        font-weight: 600;
+        font-size: 1.2rem; }
 
 .discounted {
   position: relative;

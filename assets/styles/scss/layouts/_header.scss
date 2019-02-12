@@ -94,8 +94,10 @@
       button {
         font-size: 1.1rem;
 
-        &:hover .loginAndRegisterModal{
-          display: block;
+        &:hover .loginAndRegisterModal {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0rem);
         }
       }
 
